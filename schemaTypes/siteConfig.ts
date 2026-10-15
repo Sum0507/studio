@@ -14,6 +14,7 @@ export default {
     { name: 'instagram', title: 'Instagram URL',type: 'url'    },
     { name: 'cvUrl',     title: 'CV File URL',  type: 'string' },
     { name: 'photo', title: 'Your Photo', type: 'image', options: { hotspot: true } },
+    { name: 'heroImage', title: 'Hero Background Image', type: 'image', options: { hotspot: true } },
     {
       name: 'roles',
       title: 'Rotating Roles (hero text)',
