@@ -21,5 +21,27 @@ export default {
       type: 'array',
       of: [{ type: 'string' }],
     },
+    {
+      name: 'skills',
+      title: 'Skills',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            { name: 'category', title: 'Category', type: 'string' },
+            {
+              name: 'items',
+              title: 'Skills',
+              type: 'array',
+              of: [{ type: 'string' }],
+            },
+          ],
+          preview: {
+            select: { title: 'category' },
+          },
+        },
+      ],
+    },
   ],
 }
