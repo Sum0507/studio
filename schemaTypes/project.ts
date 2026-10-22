@@ -10,6 +10,12 @@ export default {
     { name: 'github',      title: 'GitHub URL',  type: 'url'    },
     { name: 'live',        title: 'Live URL',    type: 'url'    },
     { name: 'order',       title: 'Order',       type: 'number' },
+    {
+      name: 'previewImage',
+      title: 'Preview GIF / Image',
+      type: 'image',
+      options: { hotspot: true },
+    },
   ],
   orderings: [{ title: 'Order', name: 'orderAsc', by: [{ field: 'order', direction: 'asc' }] }],
 }
