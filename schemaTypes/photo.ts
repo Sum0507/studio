@@ -5,12 +5,15 @@ export default {
   fields: [
     { name: 'caption',  title: 'Caption',  type: 'string' },
     { name: 'image',    title: 'Image',    type: 'image', options: { hotspot: true } },
-    { name: 'rotation', title: 'Rotation (e.g. -2 or 1.5)', type: 'number' },
+    // rotation and tape were for the old polaroid cards; the site no longer
+    // reads them, so they are hidden (existing values are kept)
+    { name: 'rotation', title: 'Rotation (e.g. -2 or 1.5)', type: 'number', hidden: true },
     { name: 'order',    title: 'Order',    type: 'number' },
     {
       name: 'tape',
       title: 'Tape Colour',
       type: 'string',
+      hidden: true,
       options: {
         list: [
           { title: 'Maroon',    value: 'tape-r' },

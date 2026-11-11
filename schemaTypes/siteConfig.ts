@@ -4,7 +4,7 @@ export default {
   type: 'document',
   fields: [
     { name: 'name',      title: 'Your Name',    type: 'string' },
-    { name: 'fullName',  title: 'Full Name',    type: 'string' },
+    { name: 'fullName',  title: 'Full Name',    type: 'string', description: 'Not shown on the site yet' },
     { name: 'tagline',   title: 'Tagline',      type: 'string' },
     { name: 'bio',       title: 'Bio',          type: 'text'   },
     { name: 'location',  title: 'Location',     type: 'string' },
@@ -12,10 +12,22 @@ export default {
     { name: 'github',    title: 'GitHub URL',   type: 'url'    },
     { name: 'linkedin',  title: 'LinkedIn URL', type: 'url'    },
     { name: 'instagram', title: 'Instagram URL',type: 'url'    },
-    { name: 'cvFile',    title: 'CV (upload a PDF)', type: 'file', options: { accept: '.pdf' } },
-    { name: 'cvUrl',     title: 'CV Link (backup, used only if no PDF is uploaded)', type: 'string' },
+    {
+      name: 'cvFile',
+      title: 'CV (PDF upload)',
+      description: 'Upload the CV here. The "download cv" buttons use this first.',
+      type: 'file',
+      options: { accept: 'application/pdf' },
+    },
+    {
+      name: 'cvUrl',
+      title: 'CV link (backup)',
+      description: 'Only used when no PDF is uploaded above.',
+      type: 'string',
+    },
     { name: 'currently', title: 'Currently (live status)', type: 'string' },
-    { name: 'photo', title: 'Your Photo', type: 'image', options: { hotspot: true } },
+    // Not shown anywhere on the site right now, so hidden in the Studio
+    { name: 'photo', title: 'Your Photo', type: 'image', options: { hotspot: true }, hidden: true },
     { name: 'heroImage', title: 'Hero Background Image', type: 'image', options: { hotspot: true } },
     {
       name: 'roles',
